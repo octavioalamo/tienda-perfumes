@@ -56,14 +56,10 @@ services:
 
   #https://stackoverflow.com/a/66485256
   modifybuckets:
-    image: minio/mc
-    volumes:
-      - './scripts:/scripts'
-      - './min.io/init_scripts:/init_scripts'
-      - './min.io/images:/images'
+    build:
+      context: ./min.io
     depends_on:
       - bucket
-    entrypoint: "/init_scripts/init_bucket.sh"
     networks:
       - arquitectura
 
