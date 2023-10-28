@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   postgres_app:
-    build: 
+    build:
       context: ./postgres
       dockerfile: Dockerfile
     restart: always
@@ -24,18 +24,16 @@ services:
     environment:
       SPRING_PROFILES_ACTIVE: docker
     networks:
-      - arquitectura  
-      
+      - arquitectura
+
   front:
-    build: 
+    build:
       context: ./frontend
       dockerfile: Dockerfile
     depends_on:
       - postgres_app
       - back
-    volumes:
-      - './frontend:/app'
-      - '/app/node_modules'
+      - bucket
     ports:
       - '3000:3000'
     stdin_open: true
@@ -43,7 +41,7 @@ services:
       CHOKIDAR_USEPOLLING: 'true'
     networks:
       - arquitectura
-    
+
   bucket:
     image: minio/minio
     entrypoint: "minio server /data --console-address :9001"
@@ -55,7 +53,7 @@ services:
       MINIO_ROOT_PASSWORD: S1ngu1ar
     networks:
       - arquitectura
-  
+
   #https://stackoverflow.com/a/66485256
   modifybuckets:
     image: minio/mc
