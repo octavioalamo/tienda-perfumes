@@ -48,6 +48,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "start:production": "serve -s build",
     "test": "jest",
     "eject": "react-scripts eject"
   },
