@@ -78,14 +78,6 @@ Once the installation proccess is finished, it is very recommended you upgrade t
 sudo apt update && sudo apt -y upgrade
 ```
 
-Notice you should enter now the docker commands in an Ubuntu terminal, not Window's PowerShell or CMD.
-To get an Ubuntu terminal you can:
- - [Windows 10 and 11] From the Windows Start Menu, select 'Ubuntu'
- - [Windows 11] Open the ***Terminal application*** from the start menu, then click on the down-arrow  button (v) in the menu bar and select Ubuntu
-    - [Windows 10] You can do the previous point in Windows 10, installing [Windows Terminal](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=es-es&gl=es&rtc=1=) first, which is shipped by default on Windows 11.
-- [Windows 10 and 11] Installing [ConEmu](https://conemu.github.io/), an alternative terminal with very useful functions.
-
-
 ## Screenshots
 
 |                    Menu page                     |                     Product page                      |
