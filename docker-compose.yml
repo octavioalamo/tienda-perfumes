@@ -5,7 +5,6 @@ services:
     build:
       context: ./postgres
       dockerfile: Dockerfile
-    restart: always
     environment:
       POSTGRES_PASSWORD: root
       POSTGRES_USER: postgres
@@ -65,7 +64,6 @@ services:
 
   smtp4dev:
     image: rnwood/smtp4dev:v3.1
-    restart: always
     volumes:
       - smtp4dev-data:/smtp4dev
     ports:
